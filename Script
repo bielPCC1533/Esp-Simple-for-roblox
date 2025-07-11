@@ -1,0 +1,10 @@
+local ScreenGui = Instance.new("ScreenGui", game.Players.LocalPlayer:WaitForChild("PlayerGui"))
+local ToggleESP = Instance.new("TextButton", ScreenGui)
+ToggleESP.Size = UDim2.new(0, 100, 0, 50)
+ToggleESP.Position = UDim2.new(0, 10, 0, 10)
+ToggleESP.Text = "Toggle ESP"
+
+ToggleESP.MouseButton1Click:Connect(function()
+    ESPEnabled = not ESPEnabled
+    ToggleESP.Text = ESPEnabled and "ESP ON" or "ESP OFF"
+end)
